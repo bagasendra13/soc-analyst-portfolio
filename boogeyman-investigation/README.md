@@ -1,44 +1,40 @@
 # End-to-End SOC Incident Investigation
+## TryHackMe — Boogeyman Series
 
-## Overview
+### Overview
 
 Investigation of simulated cyber incidents from a SOC analyst perspective.
-The investigation focused on analyzing security logs, identifying indicators
-of compromise, reconstructing attack timelines, and mapping attacker behavior
-to MITRE ATT&CK techniques.
 
-## Objectives
+### Cases
 
-- Investigate suspicious security events
-- Analyze endpoint and authentication logs
-- Correlate events and timestamps
-- Reconstruct the attack timeline
-- Identify indicators of compromise
-- Map attacker behavior to MITRE ATT&CK
+#### Boogeyman 1
+- Objective:
+- Data analyzed:
+- Tools used:
+- Key findings:
+- MITRE ATT&CK:
 
-## Tools & Technologies
+#### Boogeyman 2
+- Objective:
+- Data analyzed:
+- Tools used:
+- Key findings:
+- MITRE ATT&CK:
 
-- SIEM
-- Windows Event Logs
-- Sysmon
-- Splunk
-- MITRE ATT&CK
+#### Boogeyman 3
+- Objective:
+- Data analyzed:
+- Tools used:
+- Key findings:
+- MITRE ATT&CK:
 
-## Investigation Process
+### Investigation Methodology
 
-1. Alert / Event Identification
-2. Log Analysis
-3. Event Correlation
-4. Timeline Reconstruction
-5. IOC Identification
-6. MITRE ATT&CK Mapping
-7. Investigation Summary
-
-## Key Findings
-
-[Isi berdasarkan hasil investigasi kamu sendiri]
-
-## Lessons Learned
-
-[Isi apa yang kamu pelajari]
+1. Initial alert/event review
+2. Log analysis
+3. Event correlation
+4. IOC identification
+5. Timeline reconstruction
+6. MITRE ATT&CK mapping
+7. Investigation conclusion
 
