@@ -371,3 +371,7 @@ Endpoint and network telemetry should be correlated during incident investigatio
 PowerShell logging can provide valuable evidence of attacker activity.
 DNS traffic can be abused as a covert channel for data exfiltration.
 Timeline reconstruction helps connect individual events into a complete attack chain.
+
+References
+TryHackMe — Boogeyman
+MITRE ATT&CK
