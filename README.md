@@ -153,7 +153,8 @@ Alert / Suspicious Activity
             ↓
  Investigation Summary
 ```
-📚 Learning & Certifications
+
+# 📚 Learning & Certifications
 TryHackMe
 Hands-on cybersecurity training covering:
 
@@ -169,7 +170,7 @@ Profile: [YOUR TRYHACKME PROFILE]
 Certifications
 [Certification Name] — [Issuer] — [Year]
 [Certification Name] — [Issuer] — [Year]
-📫 Contact
+# 📫 Contact
 LinkedIn: [YOUR LINKEDIN]
 Email: [YOUR EMAIL]
 GitHub: [YOUR GITHUB]
