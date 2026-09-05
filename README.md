@@ -152,7 +152,7 @@ Alert / Suspicious Activity
  Detection Opportunities
             ↓
  Investigation Summary
-
+```
 📚 Learning & Certifications
 TryHackMe
 Hands-on cybersecurity training covering:
