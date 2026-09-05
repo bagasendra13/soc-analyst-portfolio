@@ -170,6 +170,7 @@ Profile: [YOUR TRYHACKME PROFILE]
 Certifications
 [Certification Name] — [Issuer] — [Year]
 [Certification Name] — [Issuer] — [Year]
+
 # 📫 Contact
 LinkedIn: [YOUR LINKEDIN]
 Email: [YOUR EMAIL]
