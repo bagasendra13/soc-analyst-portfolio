@@ -1,42 +1,190 @@
 # SIEM Alert Triage & Incident Investigation
 
+> Hands-on SOC alert investigation using Splunk and SPL
+> in a simulated security monitoring environment.
+
 ## Overview
 
-Hands-on SIEM investigation using Splunk in a simulated SOC environment.
+This project focuses on the investigation and triage of simulated
+security alerts using Splunk.
+
+The investigation demonstrates the workflow of a SOC analyst:
+reviewing alerts, querying security logs, correlating events,
+identifying indicators of compromise, and determining the appropriate
+classification and response.
+
+---
 
 ## Objectives
 
-- Investigate security alerts
+- Investigate security alerts using Splunk
+- Develop and execute SPL queries
 - Analyze security logs
-- Perform event correlation
-- Identify suspicious activity
-- Classify security events
+- Correlate events across time and data sources
+- Identify Indicators of Compromise (IOCs)
+- Investigate suspicious activity
+- Classify alerts
+- Map findings to MITRE ATT&CK
+- Recommend appropriate response actions
 
-## Tools
+---
+
+## Tools & Technologies
 
 - Splunk
-- SIEM
+- SPL (Search Processing Language)
+- Security Logs
 - MITRE ATT&CK
 
-## Investigation
+---
 
-### Scenario 1 — Brute Force
+# SOC Investigation Workflow
 
-[Penjelasan singkat berdasarkan investigasimu]
+```text
+Security Alert
+      ↓
+Initial Triage
+      ↓
+Log Investigation
+      ↓
+Event Correlation
+      ↓
+IOC Analysis
+      ↓
+MITRE ATT&CK Mapping
+      ↓
+Alert Classification
+      ↓
+Response Recommendation
 
-### Scenario 2 — Windows Persistence
+Investigation 1 — [Scenario Name]
+Alert Overview
+Field	Value
+Alert	[Alert name]
+Severity	[Severity]
+Host	[Host]
+User	[User]
+Timestamp	[Timestamp]
+Source	[Source]
 
-[Penjelasan]
+Investigation Objective
+[Describe what you need to determine.]
 
-### Scenario 3 — Web Shell
+Initial Triage
+Alert Context
+[Explain what triggered the alert and why it requires investigation.]
 
-[Penjelasan]
+Initial Questions
+What happened?
+Which host was affected?
+Which user was involved?
+When did the activity occur?
+Is the activity expected or suspicious?
+SPL Investigation
+Query 1
+[YOUR SPL QUERY]
 
-## Findings
+Purpose
+[Explain what this query searches for.]
 
-[Temuan kamu]
+Result
+[Describe the important result.]
 
-## Lessons Learned
+Query 2
+[YOUR SPL QUERY]
 
-[Apa yang kamu pelajari]
+Purpose
+[Explain what this query searches for.]
 
+Result
+[Describe the important result.]
+
+Event Correlation
+[Explain how multiple events were correlated.]
+
+Example areas to investigate:
+
+Timestamp
+Source IP
+Destination IP
+Username
+Hostname
+Process
+Parent process
+Command line
+Authentication activity
+Indicators of Compromise
+Type	Indicator	Context
+IP	[IP]	[Context]
+Domain	[Domain]	[Context]
+Username	[Username]	[Context]
+Process	[Process]	[Context]
+Hash	[Hash]	[Context]
+
+MITRE ATT&CK Mapping
+Tactic	Technique	Evidence
+[Tactic]	Txxxx	[Evidence]
+[Tactic]	Txxxx	[Evidence]
+
+Alert Classification
+Classification: [TRUE POSITIVE / FALSE POSITIVE / SUSPICIOUS]
+
+Severity: [LOW / MEDIUM / HIGH / CRITICAL]
+
+Reasoning
+[Explain why the alert received this classification.]
+
+Recommended Response
+[Containment action]
+[Investigation action]
+[Monitoring action]
+[Escalation action]
+Investigation 2 — [Scenario Name]
+Repeat the same structure:
+
+Alert Overview
+Investigation Objective
+Initial Triage
+SPL Investigation
+Event Correlation
+IOC Analysis
+MITRE ATT&CK
+Alert Classification
+Recommended Response
+Investigation 3 — [Scenario Name]
+Repeat the same structure.
+
+Detection Opportunities
+Based on the investigation, the following detection opportunities
+could be implemented:
+
+Authentication
+Detect multiple failed authentication attempts.
+Detect suspicious successful authentication following repeated failures.
+Process Execution
+Monitor suspicious parent-child process relationships.
+Detect execution of unusual binaries from suspicious directories.
+Network Activity
+Monitor connections to known malicious infrastructure.
+Investigate unusual outbound connections from endpoints.
+PowerShell
+Monitor encoded PowerShell commands.
+Detect PowerShell execution followed by external network communication.
+Key Skills Demonstrated
+SIEM Investigation
+Splunk
+SPL
+Alert Triage
+Log Analysis
+Event Correlation
+IOC Investigation
+Incident Classification
+MITRE ATT&CK
+Security Monitoring
+Lessons Learned
+[Lesson 1]
+[Lesson 2]
+[Lesson 3]
+References
+TryHackMe — Alert Triage With Splunk
+MITRE ATT&CK
