@@ -1,40 +1,64 @@
-# End-to-End SOC Incident Investigation
-## TryHackMe — Boogeyman Series
+# End-to-End Phishing & Incident Investigation
 
-### Overview
+## Scenario
 
-Investigation of simulated cyber incidents from a SOC analyst perspective.
+A finance employee received a malicious invoice-themed
+phishing email that resulted in workstation compromise.
 
-### Cases
+## Objective
 
-#### Boogeyman 1
-- Objective:
-- Data analyzed:
-- Tools used:
-- Key findings:
-- MITRE ATT&CK:
+Investigate the complete attack chain from initial access
+to data exfiltration.
 
-#### Boogeyman 2
-- Objective:
-- Data analyzed:
-- Tools used:
-- Key findings:
-- MITRE ATT&CK:
+## Tools
 
-#### Boogeyman 3
-- Objective:
-- Data analyzed:
-- Tools used:
-- Key findings:
-- MITRE ATT&CK:
+- Thunderbird
+- LNKParse3
+- Wireshark
+- Tshark
+- jq
+- grep
+- sed
+- CyberChef
 
-### Investigation Methodology
+## Investigation
 
-1. Initial alert/event review
-2. Log analysis
-3. Event correlation
-4. IOC identification
-5. Timeline reconstruction
-6. MITRE ATT&CK mapping
-7. Investigation conclusion
+### 1. Initial Access — Phishing
 
+[analisis kamu]
+
+### 2. Execution — Malicious LNK
+
+[analisis kamu]
+
+### 3. PowerShell Activity
+
+[analisis kamu]
+
+### 4. Discovery
+
+[analisis kamu]
+
+### 5. Collection
+
+[analisis kamu]
+
+### 6. C2 & Exfiltration
+
+[analisis kamu]
+
+## Attack Timeline
+
+[buat timeline]
+
+## MITRE ATT&CK Mapping
+
+[tabel]
+
+## Detection Opportunities
+
+[apa yang seharusnya bisa dideteksi SOC]
+
+## Lessons Learned
+
+[apa yang kamu pelajari]
