@@ -314,28 +314,28 @@ Sensitive Data Collection
 C2 Communication
       ↓
 DNS Data Exfiltration
-
-MITRE ATT&CK Mapping
-Tactic	Technique	Evidence
-Initial Access	T1566	Phishing email
-Execution	T1059.001	PowerShell execution
-Discovery	[Txxxx]	Enumeration activity
-Collection	T1005	KeePass database accessed
+```
+# MITRE ATT&CK Mapping
+Tactic	      Technique	Evidence
+Initial Access	T1566	      Phishing email
+Execution	      T1059.001   PowerShell execution
+Discovery	      [Txxxx]     Enumeration activity
+Collection	      T1005	      KeePass database accessed
 Command & Control	T1071.001	HTTP communication
 Exfiltration	T1048.003	DNS-based exfiltration
 
-Indicators of Compromise
-Type	Indicator	Description
-Domain	[DOMAIN]	Attacker infrastructure
-IP	[IP]	C2 / hosting server
-File	Invoice_20230103.lnk	Malicious attachment
-File	protected_data.kdbx	Sensitive data targeted
-Tool	Seatbelt	Enumeration utility
+# Indicators of Compromise
+Type	      Indicator	            Description
+Domain	[DOMAIN]	            Attacker infrastructure
+IP	      [IP]	                  C2 / hosting server
+File	      Invoice_20230103.lnk	Malicious attachment
+File	      protected_data.kdbx	Sensitive data targeted
+Tool	      Seatbelt	            Enumeration utility
 
 Sensitive credentials, passwords, personal information, and financial
 information have been intentionally excluded from this report.
 
-Detection Opportunities
+# Detection Opportunities
 Phishing
 Monitor suspicious sender domains.
 Detect invoice-themed phishing emails.
@@ -355,7 +355,8 @@ DNS Exfiltration
 Monitor unusually long DNS queries.
 Detect high-frequency DNS queries to suspicious domains.
 Monitor abnormal DNS query patterns.
-Investigation Summary
+
+# Investigation Summary
 This investigation demonstrated a complete attack chain beginning with
 a targeted phishing email and progressing through malicious LNK execution,
 PowerShell activity, endpoint discovery, sensitive data collection,
@@ -365,13 +366,13 @@ The investigation required correlation of email artifacts, endpoint logs,
 PowerShell activity, and network traffic to reconstruct the attack timeline
 and identify relevant attacker techniques.
 
-Lessons Learned
+# Lessons Learned
 Phishing investigations require analysis of both email content and headers.
 Endpoint and network telemetry should be correlated during incident investigation.
 PowerShell logging can provide valuable evidence of attacker activity.
 DNS traffic can be abused as a covert channel for data exfiltration.
 Timeline reconstruction helps connect individual events into a complete attack chain.
 
-References
+# References
 TryHackMe — Boogeyman
 MITRE ATT&CK
