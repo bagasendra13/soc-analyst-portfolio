@@ -316,21 +316,23 @@ C2 Communication
 DNS Data Exfiltration
 ```
 # MITRE ATT&CK Mapping
-Tactic	      Technique	Evidence
-Initial Access	T1566	      Phishing email
-Execution	      T1059.001   PowerShell execution
-Discovery	      [Txxxx]     Enumeration activity
-Collection	      T1005	      KeePass database accessed
-Command & Control	T1071.001	HTTP communication
-Exfiltration	T1048.003	DNS-based exfiltration
+| Tactic | Technique | Evidence |
+|---|---|---|
+| Initial Access | T1566 | Phishing email |
+| Execution | T1059.001 | PowerShell execution |
+| Discovery | [Txxxx] | Enumeration activity |
+| Collection | T1005 | KeePass database accessed |
+| Command & Control | T1071.001 | HTTP communication |
+| Exfiltration | T1048.003 | DNS-based exfiltration |	
 
 # Indicators of Compromise
-Type	      Indicator	            Description
-Domain	[DOMAIN]	            Attacker infrastructure
-IP	      [IP]	                  C2 / hosting server
-File	      Invoice_20230103.lnk	Malicious attachment
-File	      protected_data.kdbx	Sensitive data targeted
-Tool	      Seatbelt	            Enumeration utility
+| Type | Indicator | Description |
+|---|---|---|
+| Domain | [DOMAIN] | Attacker infrastructure |
+| IP | [IP] | C2 / hosting server |
+| File | Invoice_20230103.lnk | Malicious attachment |
+| File | protected_data.kdbx | Sensitive data targeted |
+| Tool | Seatbelt | Enumeration utility |
 
 Sensitive credentials, passwords, personal information, and financial
 information have been intentionally excluded from this report.
