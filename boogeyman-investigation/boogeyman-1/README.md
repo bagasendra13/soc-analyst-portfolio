@@ -118,13 +118,21 @@ and determining the techniques used by the attacker.
 
 ```text
 [IP address]
-Domains
+```
+## Domains
+```text
 [Domain]
-File Names
+```
+## File Names
+```text
 [File name]
-Hashes
+```
+## Hashes
+```text
 [Hash]
-User Accounts
+```
+## User Accounts
+```text
 [Username]
-
+```
 Only include IOCs that were actually identified during the investigation.
