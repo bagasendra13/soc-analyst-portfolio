@@ -347,7 +347,7 @@ The investigation confirmed that sensitive information had been successfully exf
 
 | Stage | Event | Evidence | Analysis |
 |---:|---|---|---|
-| 1 | Phishing email received | `.eml` | Initial delivery mechanism |
+| 1 | Phishing email received | `dump.eml` | Initial delivery mechanism |
 | 2 | Encrypted attachment extracted | `Invoice_20230103.lnk` | Malicious LNK identified |
 | 3 | LNK analyzed | `lnkparse` output | Encoded PowerShell payload discovered |
 | 4 | Payload downloaded | HTTP traffic | Attacker infrastructure identified |
