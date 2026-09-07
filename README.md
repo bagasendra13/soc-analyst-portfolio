@@ -10,7 +10,7 @@ developing practical SOC analyst skills.
 
 ---
 
-## 🎯 Career Focus
+## Career Focus
 
 **Target Role:** Junior SOC Analyst / Cybersecurity Analyst
 
@@ -28,7 +28,7 @@ Areas of interest:
 
 ---
 
-## 🛠️ Technical Skills
+## Technical Skills
 
 ### Security & SOC
 
@@ -51,9 +51,9 @@ Areas of interest:
 
 ---
 
-# 📂 Projects
+# Projects
 
-## 01 — End-to-End Phishing & Incident Investigation
+## 01. End-to-End Phishing & Incident Investigation
 
 **Focus:** Phishing Analysis · Digital Forensics · PowerShell
 Investigation · Network Analysis · C2 · Data Exfiltration
@@ -71,11 +71,11 @@ through command-and-control activity and data exfiltration.
 - DNS exfiltration analysis
 - MITRE ATT&CK mapping
 
-➡️ **[View Project](./boogeyman-investigation/)**
+**[View Project](./boogeyman-investigation/)**
 
 ---
 
-## 02 — SIEM Alert Triage & Incident Investigation
+## 02. SIEM Alert Triage & Incident Investigation
 
 **Focus:** Splunk · SPL · Alert Triage · Log Analysis ·
 Event Correlation · Incident Classification
@@ -94,11 +94,11 @@ and classify incidents.
 - IOC investigation
 - MITRE ATT&CK
 
-➡️ **[View Project](./splunk-alert-triage/)**
+**[View Project](./splunk-alert-triage/)**
 
 ---
 
-## 03 — Windows Security Monitoring & Threat Detection
+## 03. Windows Security Monitoring & Threat Detection
 
 **Focus:** Windows Event Logs · Sysmon · PowerShell ·
 Endpoint Monitoring · Threat Detection
@@ -117,11 +117,11 @@ process execution, PowerShell activity, persistence, and network behavior.
 - Event correlation
 - MITRE ATT&CK
 
-➡️ **[View Project](./windows-security-monitoring/)**
+**[View Project](./windows-security-monitoring/)**
 
 ---
 
-# 📊 Security Investigation Workflow
+#  Security Investigation Workflow
 
 My general approach to security investigations:
 
@@ -145,7 +145,7 @@ Alert / Suspicious Activity
  Investigation Summary
 ```
 
-# 📚 Learning & Certifications
+#  Learning & Certifications
 TryHackMe
 Hands-on cybersecurity training covering:
 
@@ -162,7 +162,7 @@ Certifications
 [Certification Name] — [Issuer] — [Year]
 [Certification Name] — [Issuer] — [Year]
 
-# 📫 Contact
+# Contact
 LinkedIn: www.linkedin.com/in/bagasdeswaji
 Email: bagasendra13@gmail.com
 This repository contains documentation of hands-on cybersecurity
