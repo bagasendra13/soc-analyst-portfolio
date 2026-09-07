@@ -80,7 +80,7 @@ through command-and-control activity and data exfiltration.
 - DNS exfiltration analysis
 - MITRE ATT&CK mapping
 
-➡️ **[View Project](./01-boogeyman-investigation/)**
+➡️ **[View Project](./boogeyman-investigation/)**
 
 ---
 
