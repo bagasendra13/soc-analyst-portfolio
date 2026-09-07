@@ -15,7 +15,7 @@ IOC identification, and MITRE ATT&CK mapping.
 
 | Part | Focus | Status |
 |---|---|---|
-| Boogeyman 1 | [Focus] | Completed |
+| Boogeyman 1 | Phishing Email Analysis | Completed |
 | Boogeyman 2 | [Focus] | Completed |
 | Boogeyman 3 | [Focus] | Completed |
 
