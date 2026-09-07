@@ -136,3 +136,37 @@ and determining the techniques used by the attacker.
 [Username]
 ```
 Only include IOCs that were actually identified during the investigation.
+
+# MITRE ATT&CK Mapping
+| Tactic   | Technique   | ID    | Evidence   |
+| -------- | ----------- | ----- | ---------- |
+| [Tactic] | [Technique] | Txxxx | [Evidence] |
+| [Tactic] | [Technique] | Txxxx | [Evidence] |
+| [Tactic] | [Technique] | Txxxx | [Evidence] |
+
+# Key Findings
+The investigation identified the following:
+[Finding #1]
+[Finding #2]
+[Finding #3]
+[Finding #4]
+
+# Investigation Conclusion
+[Write a short conclusion explaining what happened,
+how the attacker operated, and what evidence supported
+your conclusion.]
+
+# Skills Demonstrated
+Log Analysis
+Security Event Analysis
+Incident Investigation
+IOC Identification
+Attack Timeline Reconstruction
+MITRE ATT&CK Mapping
+Threat Detection
+Evidence Analysis
+
+# Lessons Learned
+[Lesson learned #1]
+[Lesson learned #2]
+[Lesson learned #3]
