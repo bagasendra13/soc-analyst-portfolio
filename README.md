@@ -103,7 +103,7 @@ and classify incidents.
 - IOC investigation
 - MITRE ATT&CK
 
-➡️ **[View Project](./02-splunk-alert-triage/)**
+➡️ **[View Project](./splunk-alert-triage/)**
 
 ---
 
@@ -126,7 +126,7 @@ process execution, PowerShell activity, persistence, and network behavior.
 - Event correlation
 - MITRE ATT&CK
 
-➡️ **[View Project](./03-windows-security-monitoring/)**
+➡️ **[View Project](./windows-security-monitoring/)**
 
 ---
 
@@ -165,16 +165,15 @@ Incident response
 Windows security
 Network security
 Threat detection
-Profile: [YOUR TRYHACKME PROFILE]
+Profile: https://tryhackme.com/p/mizzdog
 
 Certifications
 [Certification Name] — [Issuer] — [Year]
 [Certification Name] — [Issuer] — [Year]
 
 # 📫 Contact
-LinkedIn: [YOUR LINKEDIN]
-Email: [YOUR EMAIL]
-GitHub: [YOUR GITHUB]
+LinkedIn: www.linkedin.com/in/bagasdeswaji
+Email: bagasendra13@gmail.com
 This repository contains documentation of hands-on cybersecurity
 labs and simulated security investigations performed for learning
 and portfolio purposes.
