@@ -150,21 +150,21 @@ TryHackMe
 Hands-on cybersecurity training covering:
 
 SOC operations
-Security monitoring
-SIEM
-Incident response
-Windows security
-Network security
-Threat detection
-Profile: https://tryhackme.com/p/mizzdog
+- Security monitoring
+- SIEM
+- Incident response
+- Windows security
+- Network security
+- Threat detection
+- Profile: https://tryhackme.com/p/mizzdog
 
 Certifications
-[Certification Name] — [Issuer] — [Year]
-[Certification Name] — [Issuer] — [Year]
+- [Certification Name] — [Issuer] — [Year]
+- [Certification Name] — [Issuer] — [Year]
 
 # Contact
-LinkedIn: www.linkedin.com/in/bagasdeswaji
-Email: bagasendra13@gmail.com
+- LinkedIn: www.linkedin.com/in/bagasdeswaji
+- Email: bagasendra13@gmail.com
 This repository contains documentation of hands-on cybersecurity
 labs and simulated security investigations performed for learning
 and portfolio purposes.
