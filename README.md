@@ -42,21 +42,12 @@ Areas of interest:
 
 ### Tools
 
-- Splunk
+- Splunk & ELK Stack
 - Wireshark
-- Tshark
 - Sysmon
 - Windows Event Logs
-- LNKParse3
+- VirusTotal
 - CyberChef
-
-### Command Line
-
-- Linux CLI
-- PowerShell
-- jq
-- grep
-- sed
 
 ---
 
