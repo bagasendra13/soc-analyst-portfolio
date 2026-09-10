@@ -20,3 +20,124 @@ The investigation covers the following areas:
 - MITRE ATT&CK Mapping
 
 The main objective was to reconstruct the attack chain from the initial phishing email to the execution of the malicious payload, establishment of C2 communication, and persistence on the compromised Windows workstation.
+
+## Investigation Objectives
+
+- Identify the phishing email sender and victim
+- Identify the malicious email attachment
+- Calculate the MD5 hash of the attachment
+- Determine whether the attachment is malicious
+- Analyze the VBA macro contained in the Word document
+- Identify the URL used to download the Stage 2 payload
+- Identify the process that executed the Stage 2 payload
+- Identify the full path of the Stage 2 payload
+- Analyze the Windows memory dump using Volatility
+- Identify the malicious process used to establish the C2 connection
+- Identify the URL used to download the malicious binary
+- Identify the full path of the malicious C2 process
+- Identify the C2 IP address and port
+- Identify the original file path of the malicious email attachment
+- Identify the scheduled task used for persistence
+- Reconstruct the complete attack chain
+- Map the observed activity to MITRE ATT&CK techniques
+
+## Environment
+
+| Category | Details |
+|---|---|
+| Platform | TryHackMe |
+| Room | Boogeyman |
+| Part | 2 |
+| Task | Spear Phishing Human Resources |
+| Analysis OS | Linux |
+| Target OS | Windows |
+| Email Attachment | `Resume_WesleyTaylor.doc` |
+| Memory Dump | `WKSTN-2961.raw` |
+| Tools | Linux CLI, `md5sum`, `olevba`, VirusTotal, Volatility, `strings`, `grep` |
+
+# Investigation
+
+## 1. Phishing Email Analysis
+
+### Objective
+
+The first step of the investigation was to identify the phishing email and determine who sent it, who the target was, and what attachment was delivered.
+
+### 1.1 Email Identification
+
+The phishing email contained the following information:
+
+| Item | Value |
+|---|---|
+| Sender | `westaylor23@outlook.com` |
+| Victim | `maxine.beck@quicklogisticsorg.onmicrosoft.com` |
+| Attachment | `Resume_WesleyTaylor.doc` |
+
+The email was crafted to look like a resume-related email and was targeted at a Human Resources employee.
+
+#### Finding
+
+The attacker used a spear-phishing email to deliver a malicious Microsoft Word document to the victim. The document was used as the initial entry point into the victim's system.
+
+### 1.2 Attachment MD5 Hash
+
+After identifying the attachment, I calculated its MD5 hash using the following command:
+
+```bash
+md5sum Resume_WesleyTaylor.doc
+```
+I then checked the hash using VirusTotal to determine whether the file had already been identified as malicious.
+
+Observation
+The file was flagged as malicious by VirusTotal.
+
+Finding
+The attachment was confirmed to be malicious.
+
+## 2. Malicious Document Analysis
+
+### 2.1 VBA Macro Analysis
+
+The next step was to inspect the contents of the malicious Word document and determine whether it contained any macros.
+
+I used `olevba` to extract and analyze the VBA code:
+
+```bash
+olevba Resume_WesleyTaylor.doc
+```
+The output showed suspicious VBA macro activity. The macro contained code responsible for downloading the next stage of the payload from an external URL.
+
+The URL used to download the Stage 2 payload was:
+```bash
+https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png
+```
+Finding
+The malicious Word document used a VBA macro to download the next-stage payload from attacker-controlled infrastructure.
+
+### 2.2 Stage 2 Payload Execution
+
+Further analysis of the VBA macro showed that the downloaded Stage 2 payload was executed using:
+
+```text
+wscript.exe
+```
+The full path of the Stage 2 payload was:
+```bash
+C:\ProgramData\update.js
+```
+
+C:\ProgramData\update.js
+
+This indicates that the attacker used Windows Script Host to execute a JavaScript payload.
+
+The initial execution chain can be summarized as:
+Resume_WesleyTaylor.doc
+        ↓
+VBA Macro
+        ↓
+Download update.png
+        ↓
+C:\ProgramData\update.js
+        ↓
+wscript.exe
+
