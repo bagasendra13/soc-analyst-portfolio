@@ -86,12 +86,16 @@ After identifying the attachment, I calculated its MD5 hash using the following 
 ```bash
 md5sum Resume_WesleyTaylor.doc
 ```
+The resulting MD5 hash was:
+```bash
+52c4384a0b9e248b95804352ebec6c5b
+```
 I then checked the hash using VirusTotal to determine whether the file had already been identified as malicious.
 
 Observation
 The file was flagged as malicious by VirusTotal.
 
-Finding
+#### Finding
 The attachment was confirmed to be malicious.
 
 ## 2. Malicious Document Analysis
@@ -111,7 +115,7 @@ The URL used to download the Stage 2 payload was:
 ```bash
 https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.png
 ```
-Finding
+#### Finding
 The malicious Word document used a VBA macro to download the next-stage payload from attacker-controlled infrastructure.
 
 ### 2.2 Stage 2 Payload Execution
@@ -143,7 +147,7 @@ C:\ProgramData\update.js
 wscript.exe
 ```
 
-Finding
+#### Finding
 The malicious Word document acted as the first stage of the attack, while update.js served as the Stage 2 payload and was executed through wscript.exe
 
 ## 3. Memory Forensics
@@ -174,7 +178,7 @@ The parent PID associated with the wscript.exe process was: `1124`
 The process tree also revealed another suspicious process that was responsible for establishing the C2 connection.
 The PID of this malicious process was: `6216`
 
-Finding
+#### Finding
 The Stage 2 payload was executed by wscript.exe with PID 4260.
 The malicious process used to establish the C2 connection was identified with PID 6216.
 
@@ -195,7 +199,7 @@ https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe
 ```
 The downloaded binary was named: `update.exe`
 
-Finding
+#### Finding
 The Stage 2 JavaScript payload downloaded the malicious binary from:
 ```bash
 https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe
@@ -212,7 +216,7 @@ The command line revealed that the malicious binary was executed from:
 ```bash
 C:\Windows\Tasks\updater.exe
 ```
-Finding
+#### Finding
 The full path of the malicious process used to establish the C2 connection was:
 ```bash
 C:\Windows\Tasks\updater.exe
@@ -249,7 +253,7 @@ The investigation identified the following connection:
 ```bash
 128.199.95.189:8080
 ```
-Finding
+#### Finding
 The malicious binary established a C2 connection to:
 ```bash
 128.199.95.189:8080
@@ -275,7 +279,7 @@ The following path was identified:
 ```bash
 C:\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc
 ```
-Finding
+#### Finding
 The malicious attachment was stored in the victim's Outlook Internet cache at:
 ```bash
 C:\Users\maxine.beck\AppData\Local\Microsoft\Windows\INetCache\Content.Outlook\WQHGZCFI\Resume_WesleyTaylor (002).doc
@@ -308,7 +312,7 @@ HKCU:\Software\Microsoft\Windows\CurrentVersion
 ```
 The retrieved value is then Base64-decoded and converted from Unicode before being executed using `IEX`.
 
-Finding
+#### Finding
 The attacker used a scheduled task named `Updater` as a persistence mechanism.
 
 The task executes a hidden PowerShell command that retrieves an encoded payload from the Windows Registry, decodes it, and executes it.
