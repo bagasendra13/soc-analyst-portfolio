@@ -141,3 +141,54 @@ C:\ProgramData\update.js
         ↓
 wscript.exe
 
+Finding
+The malicious Word document acted as the first stage of the attack, while update.js served as the Stage 2 payload and was executed through wscript.exe
+
+## 3. Memory Forensics
+
+### Objective
+
+After analyzing the malicious document, I moved to the provided Windows memory dump to investigate the processes created during the attack.
+
+The memory dump used for the investigation was:
+
+```text
+WKSTN-2961.raw
+```
+I used Volatility to analyze the process tree, command lines, and network connections.
+
+### 3.1 Process Tree Analysis
+I first searched the process tree for wscript.exe:
+```bash
+vol -f WKSTN-2961.raw windows.pstree.PsTree | grep wscript.exe
+```
+The malicious wscript.exe process was identified with PID: `4260`
+
+I then searched for the process ID to investigate its relationship with other processes:
+```bash
+vol -f WKSTN-2961.raw windows.pstree.PsTree | grep 4260
+```
+The parent PID associated with the wscript.exe process was: `1124`
+The process tree also revealed another suspicious process that was responsible for establishing the C2 connection.
+The PID of this malicious process was: `6216`
+
+Finding
+The Stage 2 payload was executed by wscript.exe with PID 4260.
+The malicious process used to establish the C2 connection was identified with PID 6216.
+
+## 4. Stage 3 Payload Analysis
+
+### 4.1 Malicious Binary Download URL
+
+After identifying the Stage 2 payload, I investigated what additional binary was downloaded by the JavaScript payload.
+
+I searched the memory dump for references to the attacker's domain using:
+
+```bash
+strings WKSTN-2961.raw | grep boogeyman
+```
+The following URL was identified:
+```bash
+https://files.boogeymanisback.lol/aa2a9c53cbb80416d3b47d85538d9971/update.exe
+```
+The downloaded binary was named: `update.exe`
