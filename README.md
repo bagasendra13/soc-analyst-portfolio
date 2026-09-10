@@ -1,4 +1,4 @@
-# SOC Analyst Portfolio (Not Ready Yet)
+# SOC Analyst Portfolio
 
 Hi! I'm Bagas Deswaji, an aspiring Cybersecurity / SOC Analyst
 with hands-on experience in security monitoring, SIEM investigation,
@@ -159,7 +159,7 @@ SOC operations
 - Profile: https://tryhackme.com/p/mizzdog
 
 Certifications
-- [Certification Name] — [Issuer] — [Year]
+- Google Cybersecurity Professional Certificate - Coursera - Issued April 2026
 - [Certification Name] — [Issuer] — [Year]
 
 # Contact
