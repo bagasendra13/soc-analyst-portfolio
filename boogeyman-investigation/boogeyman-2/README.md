@@ -131,6 +131,7 @@ C:\ProgramData\update.js
 This indicates that the attacker used Windows Script Host to execute a JavaScript payload.
 
 The initial execution chain can be summarized as:
+```text
 Resume_WesleyTaylor.doc
         ↓
 VBA Macro
@@ -140,6 +141,7 @@ Download update.png
 C:\ProgramData\update.js
         ↓
 wscript.exe
+```
 
 Finding
 The malicious Word document acted as the first stage of the attack, while update.js served as the Stage 2 payload and was executed through wscript.exe
