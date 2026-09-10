@@ -129,9 +129,6 @@ The full path of the Stage 2 payload was:
 ```bash
 C:\ProgramData\update.js
 ```
-
-C:\ProgramData\update.js
-
 This indicates that the attacker used Windows Script Host to execute a JavaScript payload.
 
 The initial execution chain can be summarized as:
@@ -259,6 +256,7 @@ The malicious binary established a C2 connection to:
 128.199.95.189:8080
 ```
 This IP address and port are important network Indicators of Compromise.
+
 C2 IOC:
 ```bash
 128.199.95.189:8080
