@@ -1,4 +1,4 @@
-# SOC Analyst Portfolio
+# SOC Analyst Portfolio (Not Ready Yet)
 
 Hi! I'm Bagas Deswaji, an aspiring Cybersecurity / SOC Analyst
 with hands-on experience in security monitoring, SIEM investigation,
