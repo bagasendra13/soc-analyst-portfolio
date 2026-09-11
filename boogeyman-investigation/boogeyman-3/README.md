@@ -64,3 +64,69 @@ The investigation focused on answering the following questions:
 | Attachment Type | ISO containing HTML Application |
 | Incident Period | August 29–30, 2023 |
 | Primary Telemetry | Sysmon / Windows Event Logs |
+
+# Initial Execution and Payload Implantation
+
+## 1. Initial Stage 1 Payload Analysis
+
+### Objective
+
+The first step was to identify the process responsible for executing the initial malicious payload.
+
+Because the attachment was named:
+
+`ProjectFinancialSummary_Q3.pdf`
+
+I searched Elastic for:
+
+`ProjectFinancialSummary_Q3*`
+
+The search returned an event associated with the initial payload execution.
+
+The process identifier was:
+
+`PID: 6392`
+
+The process also had three child processes, which became useful for correlating the subsequent stages of execution.
+
+### Finding
+
+The initial Stage 1 payload was executed by the process with:
+
+`PID 6392`
+
+The presence of multiple child processes indicated that the initial payload spawned additional processes responsible for subsequent malicious activity.
+
+---
+
+## 2. Payload Implantation
+
+The next objective was to determine how the Stage 1 payload attempted to copy or implant a file to another location.
+
+I continued investigating the events associated with the initial payload and examined the process message and command-line information.
+
+The following command was identified:
+
+```text
+C:\Windows\System32\xcopy.exe" /s /i /e /h D:\review.dat C:\Users\EVAN~1.HUT\AppData\Local\Temp\review.dat
+```
+The command used 'xcopy.exe' to copy:
+```text
+D:\review.dat
+```
+to:
+```text
+C:\Users\EVAN~1.HUT\AppData\Local\Temp\review.dat
+```
+The `xcopy.exe` process was a child process of the initial payload and had:
+PID: `3832`
+Analysis
+The use of xcopy.exe allowed the malicious script to move review.dat from the mounted attachment environment to a writable temporary directory on the victim machine.
+
+This provided the attacker with a copy of the malicious file outside the original attachment location.
+
+Finding
+The full command line used to implant the file was:
+```bash
+C:\Windows\System32\xcopy.exe" /s /i /e /h D:\review.dat C:\Users\EVAN~1.HUT\AppData\Local\Temp\review.dat
+```
