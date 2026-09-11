@@ -831,11 +831,3 @@ The investigation demonstrates the importance of correlating process creation, c
     ransomboogey.exe
 
 ---
-
-**Investigation Status: Complete**
-
-**Primary Investigation Platform: Elastic Stack**
-
-**Incident Window: August 29–30, 2023**
-
-**Environment: TryHackMe — Boogeyman 3**
