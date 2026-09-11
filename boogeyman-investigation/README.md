@@ -17,7 +17,7 @@ IOC identification, and MITRE ATT&CK mapping.
 |---|---|---|
 | Boogeyman 1 | Phishing Email Analysis | Completed |
 | Boogeyman 2 | Spear Phishing Human Resources | Completed |
-| Boogeyman 3 | Business Email Compromise | completed |
+| Boogeyman 3 | Business Email Compromise | Completed |
 
 ## Skills Demonstrated
 
