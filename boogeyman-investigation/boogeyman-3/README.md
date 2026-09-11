@@ -31,23 +31,23 @@ The investigation reconstructed the attack from initial payload execution throug
 
 The investigation focused on answering the following questions:
 
-1. Identify the process that executed the initial Stage 1 payload.
-2. Determine how the attacker implanted the payload into another location.
-3. Identify how the implanted file was executed.
-4. Identify the persistence mechanism established by the attacker.
-5. Identify the C2 IP address and port.
-6. Identify the process used for UAC bypass.
-7. Identify the GitHub resource used to download the credential dumping tool.
-8. Identify credentials obtained through credential dumping.
-9. Identify the remote file accessed by the attacker.
-10. Identify the credentials used for lateral movement.
-11. Identify the hostname targeted during lateral movement.
-12. Identify the process responsible for executing the remotely issued command.
-13. Identify credentials dumped from the second compromised workstation.
-14. Identify the account targeted through DCSync.
-15. Identify the ransomware binary download URL.
-16. Reconstruct the complete attack chain.
-17. Map the observed behaviors to MITRE ATT&CK techniques.
+- Identify the process that executed the initial Stage 1 payload.
+- Determine how the attacker implanted the payload into another location.
+- Identify how the implanted file was executed.
+- Identify the persistence mechanism established by the attacker.
+- Identify the C2 IP address and port.
+- Identify the process used for UAC bypass.
+- Identify the GitHub resource used to download the credential dumping tool.
+- Identify credentials obtained through credential dumping.
+- Identify the remote file accessed by the attacker.
+- Identify the credentials used for lateral movement.
+- Identify the hostname targeted during lateral movement.
+- Identify the process responsible for executing the remotely issued command.
+- Identify credentials dumped from the second compromised workstation.
+- Identify the account targeted through DCSync.
+- Identify the ransomware binary download URL.
+- Reconstruct the complete attack chain.
+- Map the observed behaviors to MITRE ATT&CK techniques.
 
 ## Environment
 
