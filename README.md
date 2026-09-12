@@ -98,29 +98,6 @@ and classify incidents.
 
 ---
 
-## 03. Windows Security Monitoring & Threat Detection
-
-**Focus:** Windows Event Logs · Sysmon · PowerShell ·
-Endpoint Monitoring · Threat Detection
-
-Analyzed Windows security telemetry to investigate authentication,
-process execution, PowerShell activity, persistence, and network behavior.
-
-### Key Skills
-
-- Windows Event Logs
-- Sysmon
-- PowerShell
-- Process analysis
-- Authentication analysis
-- Endpoint monitoring
-- Event correlation
-- MITRE ATT&CK
-
-**[View Project](./windows-security-monitoring/)**
-
----
-
 #  Security Investigation Workflow
 
 My general approach to security investigations:
