@@ -137,7 +137,7 @@ SOC operations
 
 Certifications
 - Google Cybersecurity Professional Certificate - Coursera - Issued April 2026
-- [Certification Name] — [Issuer] — [Year]
+- 
 
 # Contact
 - LinkedIn: www.linkedin.com/in/bagasdeswaji
